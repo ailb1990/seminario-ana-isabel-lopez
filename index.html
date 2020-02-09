@@ -58,12 +58,18 @@
     <div class="summary">
         <h2 class="text-title">Resumen</h2>
         <div class="text">
-El objetivo de este proyecto es crear visualizaciones efectivas del conjunto de datos sobre el turismo internacional en España y el gasto que hacen los turistas. 
+El objetivo de este proyecto es crear visualizaciones efectivas de la diferencia de números de turismo internacional entre las Comunidades Autónomas del Mediterraneo y Andalucía y el resto de las comunidades. También se calculará la nacionalidad de los turistas que más ganancias dejan en las comunidades autónomas. 
 <br>
 <br>
 
-Quisiera demostrar si es verdad que los extranjeros vienen a España al calor de las playas del Mediterráneo y Andalucía o si por el contrario les gusta ver más de nuestro increible país.
-Para ello he usado los datos del Instituto Nacional de Estadística que mide el "Gasto de los turistas internacionales según comunidad autónoma de destino principal y país de residencia". ¿Por qué este Dataset? Porque, aunque no maneja número de turístas, puede que sea el Dataset que mejor muestre el movimiento de turistas por nuestro país. Sabiendo dónde gasta de la gente, sabemos que es lo que más han visitado
+Todos sabemos que España es un país atractivo para el resto de Europa y que esta gente viene sobre todo a disfrutar de las playas del Mediterráneo o del calor de Andalucía. 
+Con este estudio, vamos a ver cual es el destino preferido por los extranjeros entre los medidos.  
+También calcularemos de que nacionalidad es la gente que más se gasta en vacaciones. 
+Los datos son de los años 2016, 2017 y 2018 y las comunidades Autónomas en las que se midieron son Andalucía, Islas Baleares, Canarias, Cataluña, Comunidad Valenciana, Madrid y el resto de Comunidades. 
+El país de origen de los turistas puede ser uno de los siguientes: Reino Unido, Paises Nórdicos, Alemania, Francia o Italia.
+<br>
+<br>
+
             <div class="metadato  " >
               En este artículo no se tratan datos específicos de una especialidad y no hay términos del lenguaje específicos por lo que la audiencia será cualquier persona que quiera leer mi artículo y tenga edad para entenderlo. 
             </div>
@@ -76,28 +82,29 @@ Para ello he usado los datos del Instituto Nacional de Estadística que mide el 
     <!-- add data visualization -->
     <div class="plot">
         <!-- The first bar chart -->
-        <h2 class="plot-title">Hombres y mujeres del pasaje</h2>
+        <h2 class="plot-title">¿De dónde viene la gente a visitarnos?</h2>
         <div class="text">
-          Uso el tipo de gráfico circular o de tarta para representar las proporciones entre mujeres/hombres y cada una de las 3 categorias. Este tipo de gráfico es adecuado en este caso para representar proporciones en las que no es importante la precisión. Tambien podría haber utilizado gráficos de barras. <br>
-          Se han utilizado la herramienta tableau online para los gráficos de barras y circulares.
+          Lo primero que vamos a visualizar es el número de turistas que vienen cada año. Calculamos dicho número dicidiendo el gasto total por año entre el gasto por persona de cada año. Por ello el número de turistas mostrado es aproximado, no real.
+          Para ello, utilizaré un gráfico circuar hecho con Google sheet para ver el porcentaje de turistas por año.
 
         </div>  
 
-        <div id="plotContainer1">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/NL0HDs1/Titanic4.png" alt="Titanic4" border="0"></a>
-        </div>
-        
-          <h2 class="plot-title">Categorías del pasaje</h2>
-        <div id="plotContainer2">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/Z11BTL2/Titanic5.png" alt="Titanic5" border="0"></a>
-        </div>
+      <div id="plotContainer1">
+       <iframe width="665.4986522911051" height="411.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyn-mtYvQdmBpWui5XL0XsglQBWgzRHqPOCyXpM12Bs54Tb9JhTD0MwlJvlbe5k250XdrHVkl7KUbt/pubchart?oid=1172329330&amp;format=interactive"></iframe>
+       <br><br>
+       <iframe width="665.4986522911051" height="411.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyn-mtYvQdmBpWui5XL0XsglQBWgzRHqPOCyXpM12Bs54Tb9JhTD0MwlJvlbe5k250XdrHVkl7KUbt/pubchart?oid=826031194&amp;format=interactive"></iframe>
+       <br><br>
+        <iframe width="665.4986522911051" height="411.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyn-mtYvQdmBpWui5XL0XsglQBWgzRHqPOCyXpM12Bs54Tb9JhTD0MwlJvlbe5k250XdrHVkl7KUbt/pubchart?oid=577857702&amp;format=interactive"></iframe>
+       </div>
+      
+      <div class="text">
+        Como observamos en los gráficos, en estos 3 años, el porcentaje de turistas de cada país ha sido practicamente el mismo, con Reino Unido a ala cabeza e Italia a la cola. 
+      </div>
 
 
-
-        <h2 class="plot-title">SUPERVIVENCIA DENTRO DE CADA GRUPO</h2>
+        <h2 class="plot-title">Dónde veranean más turistas</h2>
         <div class="text">
-          En esta representación ya incluimos la variable supervivencia que es la clave de nuestro análisis. Mediante gráficos de barras apiladas ya podemos anticipar como la supervivencia de los pasajeros no parece aleatoria sino que parece depender tanto del sexo del pasajero como de la categoria del pasaje.
-          Podría haber utilizado gráficos circulares o de tarta como en el caso anterior pero en este caso para las categorías  los valores de los supervivientes están próximos.
+          Vamos a analizar el destino preferido de los turistas. Para poder verlo de un vistazo, usaré un gráfico de barras aplilado por año. El gráfico será creado con Tableay.
         </div> 
 
         <div id="plotContainer3">
